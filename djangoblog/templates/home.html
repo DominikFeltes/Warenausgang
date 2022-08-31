@@ -1,0 +1,107 @@
+<?php
+// PHP-Funktion, damit über mehrere Seiten hinweg
+// eine Session/Sitzung ermöglicht wird.
+// Wir benötigen Sie auf allen unseren Seiten
+session_start();
+
+?>
+<html>
+   <head>
+     <title>Loginformular</title>
+       <style type="text/css">
+         body {
+    margin: 0 auto;
+    background-image: url("djangoApp/djangoblog/logoBW.jpg");
+    background-size: 300px 100px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+a {
+    color:#fff;
+    font-weight: bolder;
+}
+a:visited {
+    color:#fff;
+}
+.icon {
+    margin-top:-120px;
+}
+input[type="text"], input[type="password"] {
+    width: 300px;
+    height: 50px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding-left:5px;
+}
+.button {
+    width:150px;
+    height: 50px;
+    font-size:18px;
+    background-color:#000;
+    color:#fff;
+    border:#fff solid 1px;
+}
+
+.button:hover {
+    background-color:#fff;
+    color:#000;
+    cursor: pointer;
+}
+.content{
+    margin-left:40%;
+    margin-right:50%;
+    padding-left:0 px;
+}
+
+p {
+  border: 2px solid blue;
+}
+p {
+  border: 2px solid blue;
+  margin: 50px;
+}
+input {
+    border: 1px solid #4195fc; /* some kind of blue border */
+
+
+    -webkit-border-radius: 4px;
+       -moz-border-radius: 4px;
+            border-radius: 4px;
+
+
+
+    -webkit-box-shadow: 0px 0px 4px #4195fc;
+       -moz-box-shadow: 0px 0px 4px #4195fc;
+            box-shadow: 0px 0px 4px #4195fc; /* some variation of blue for the shadow */
+
+}
+td  {
+    vertical-align:top;
+}
+form{
+             color: white;
+    width: 600px;
+             height: 300px;
+    margin: auto;
+    margin-top: 30px;
+}
+       </style>
+
+   </head>
+<body>
+
+<div class="content">
+  <img src="images/icon.jpg" class="icon">
+  <h1>Login</h1>
+  <form action="inc/login-inc.php" method="POST">
+  <input type="text" name="user" placeholder="Benutzername" required>
+  <input type="password" name="password" placeholder="Passwort"required><br>
+  <button type="submit" name="submit" class="button" href="https://www.google.de/">Login</button>
+
+  </form>
+  <a href="https://www.google.de/">Registrieren</a>
+</div>
+
+</body>
+</html>
+
